@@ -10,7 +10,7 @@ namespace Coding_Practice
     {
         static void Main(string[] args)
         {
-            Factory.SayHello();
+            Factory.ConditionalMail(12, 17);
             
         }
     }

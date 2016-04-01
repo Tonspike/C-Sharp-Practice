@@ -16,9 +16,28 @@ namespace Coding_Practice
             var body = "This is another test";
             var email = "test2@test.com";
 
-            Emailer.SendMail(subject, body, email);
+            DerivedEmailer.SayHello(subject, body, email);
         }
+        public static void ConditionalMail(int one, int two)
+        {
+            var subject = "test";
+            var body = "This is another test";
+            var email = "kristenlackritz@gmail.com";
 
+            if (one < two)
+            {
+                body = one + " is less than " + two;
+            }
+            if (one > two)
+            {
+                body = one + " is more than " + two;
+            }
+            if (one == two)
+            {
+                body = one + " is equal to" + two;
+            }
+            DerivedEmailer.SayHello(subject, body, email);
+        }
         
     }
 }
