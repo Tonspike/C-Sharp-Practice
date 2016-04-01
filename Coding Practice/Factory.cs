@@ -11,6 +11,14 @@ namespace Coding_Practice
         public static void SayHello()
         {
             Console.WriteLine("Hello!");
+
+            var subject = "test";
+            var body = "This is another test";
+            var email = "test2@test.com";
+
+            Emailer.SendMail(subject, body, email);
         }
+
+        
     }
 }
