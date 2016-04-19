@@ -10,8 +10,27 @@ namespace Coding_Practice
     {
         static void Main(string[] args)
         {
-            Factory.ConditionalMail(12, 17);
-            
+            var stack = Factory.StackPractice();
+            foreach (int i in stack)
+            {
+                Console.WriteLine(i);
+            }
+            var queue = Factory.QueuePractice();
+            foreach (int i in queue)
+            {
+                Console.WriteLine(i);
+            }
+            var qnum = queue.Dequeue();
+            var snum = stack.Pop();
+
+            foreach (int i in stack)
+            {
+                Console.WriteLine(i);
+            }
+            foreach (int i in queue)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
