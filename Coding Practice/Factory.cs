@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,24 @@ namespace Coding_Practice
 {
     class Factory
     {
+        public static Queue<int> QueuePractice()
+        {
+            Queue<int> queue = new Queue<int>();
+            queue.Enqueue(100);
+            queue.Enqueue(1000);
+            queue.Enqueue(129);
+            return queue;
+        }
+
+        public static Stack<int> StackPractice()
+        {
+            Stack<int> stack = new Stack<int>();
+            stack.Push(100);
+            stack.Push(1000);
+            stack.Push(129);
+            return stack;
+        }
+
         public static void SayHello()
         {
             Console.WriteLine("Hello!");
