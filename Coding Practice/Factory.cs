@@ -21,9 +21,11 @@ namespace Coding_Practice
         public static Stack<int> StackPractice()
         {
             Stack<int> stack = new Stack<int>();
-            stack.Push(100);
-            stack.Push(1000);
-            stack.Push(129);
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
+            stack.Push(5);
             return stack;
         }
 

@@ -12,11 +12,13 @@ namespace Coding_Practice
         {
             //problem: given a stack of unknown size, reverse that stack using only one other stack and a variable.
             var stack1 = Factory.StackPractice();
+            int temp = 0;
             Console.WriteLine("first stack:");
             foreach (int i in stack1)
             {
                 Console.WriteLine(i);
             }
+            
             Stack<int> stack2 = new Stack<int>();
             int count = 0;
             foreach (int i in stack1)
@@ -24,34 +26,34 @@ namespace Coding_Practice
                 //get an accurate count of how many elements have to be moved
                 count++;
             }
-            //for (int j = 0; j< count; j++)//repeat this process as many times as count.
-            //{
-                int temp = stack1.Pop();//save the top item in the variable, then push the rest through.
+            int totalcount = count;
+            //start process
+            for (int k = 0; k < totalcount + 2; k++)
+            {
+                //get temp variable first
+                temp = stack1.Pop();//save the top item in the variable, then push the rest through.
+                for (int i = 1; i < totalcount; i++)
+                {
+                    stack2.Push(stack1.Pop());
+                }
+
+                stack1.Push(temp); //temp number is now at the bottom of stack, push the rest in after it:
+
+                for (int i = 1; i < totalcount; i++)
+                {
+                    stack1.Push(stack2.Pop()); //empty first stack, ready for new input
+                }
+
+                totalcount--;
+
+                //end process
+                Console.WriteLine("second stack1:");
                 foreach (int i in stack1)
                 {
-                    stack2.Push(i);
+                    Console.WriteLine(i);
                 }
-                for (int i = 1; i < count; i++)
-                {
-                    stack1.Pop(); //empty first stack, ready for new input
-                }
-                stack1.Push(temp); //temp number is now at the bottom of stack, push the rest in after it:
-                foreach (int i in stack2)
-                {
-                    stack1.Push(i);
-                }
-            for (int i = 1; i < count; i++)
-            {
-                stack2.Pop(); //empty first stack, ready for new input
+
             }
-            //  }
-            Console.WriteLine("second stack:");
-            foreach (int i in stack1)
-            {
-                Console.WriteLine(i);
-            }
-           
-            
 
 
         }
