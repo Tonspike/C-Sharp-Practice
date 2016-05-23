@@ -8,7 +8,7 @@ namespace Coding_Practice
 {
     class LinkedList
     {
-        private Node head;
+        public Node head;
         public void printAllNodes()
         {
             Node current = head;

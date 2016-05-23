@@ -40,6 +40,20 @@ namespace Coding_Practice
             myList.printAllNodes();
             return myList;
         }
+        //problem: given a linked list, reverse the linked list iteratively
+        public static LinkedList ReverseLLIteratively(LinkedList LinkedList)
+        {
+            Node head = LinkedList.head, pointer = null;
+            while (head != null)
+            {
+                Node current = head.next;
+                head.next = pointer;
+                pointer = head;
+                head = current;
+            }
+            LinkedList.head = pointer;
+            return LinkedList;
+        }
 
         //problem: given a stack of unknown size, reverse that stack using only one other stack and a variable.
         public static void Reverse()
