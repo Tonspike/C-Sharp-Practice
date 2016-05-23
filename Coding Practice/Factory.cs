@@ -43,16 +43,33 @@ namespace Coding_Practice
         //problem: given a linked list, reverse the linked list iteratively
         public static LinkedList ReverseLLIteratively(LinkedList LinkedList)
         {
-            Node head = LinkedList.head, pointer = null;
-            while (head != null)
+            Node headValue = LinkedList.head, previousPointerValue = null;
+            while (headValue != null)
             {
-                Node current = head.next;
-                head.next = pointer;
-                pointer = head;
-                head = current;
+                Node current = headValue.next;
+                headValue.next = previousPointerValue;
+                previousPointerValue = headValue;
+                headValue = current;
             }
-            LinkedList.head = pointer;
+            LinkedList.head = previousPointerValue;
             return LinkedList;
+        }
+
+        //problem: given a linked list, reverse the linked list recursively
+        public static LinkedList ReverseLLRecursively (LinkedList linkedlist, Node node)
+        {
+            if (node == null || node.next == null) //if head is null or we are at the tail
+            {
+                linkedlist.head = node; //we are at the tail or empty list, set the new head to the tail
+                return linkedlist;
+            }
+
+            ReverseLLRecursively(linkedlist, node.next);
+
+            var nextItem = node.next; //get the next item out, dealing with references don't want to override it
+            node.next = null;         //once you get the next item out, you can delete the *reference* i.e. link to it
+            nextItem.next = node;     //set the item you got out link to next item to the current item i.e. reverse it
+            return linkedlist;
         }
 
         //problem: given a stack of unknown size, reverse that stack using only one other stack and a variable.

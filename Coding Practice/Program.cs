@@ -15,9 +15,10 @@ namespace Coding_Practice
             Console.WriteLine("Original Linked List: ");
             Console.WriteLine();
             Console.WriteLine("Reversed List: ");
-            LinkedList linkedlist2 = Factory.ReverseLLIteratively(linkedlist);
-            linkedlist2.printAllNodes();
-
+            //LinkedList linkedlist2 = Factory.ReverseLLIteratively(linkedlist);
+            //linkedlist2.printAllNodes();
+            LinkedList linkedlist3 = Factory.ReverseLLRecursively(linkedlist, linkedlist.head);
+            linkedlist3.printAllNodes();
             //end main program
         }
     }
