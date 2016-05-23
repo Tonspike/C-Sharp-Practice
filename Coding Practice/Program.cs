@@ -12,7 +12,7 @@ namespace Coding_Practice
         {
             //begin main program 
 
-            Factory.CreateLinkedList();
+           
 
 
             //end main program

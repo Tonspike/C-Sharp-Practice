@@ -11,4 +11,5 @@ namespace Coding_Practice
         public Node next;
         public Object data;
     }
+
 }

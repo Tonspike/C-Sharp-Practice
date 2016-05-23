@@ -48,5 +48,6 @@ namespace Coding_Practice
                 current.next = toAdd;
             }
         }
+
     }
 }
