@@ -10,11 +10,12 @@ namespace Coding_Practice
     {
         static void Main(string[] args)
         {
-            
+            //begin main program 
 
-           
+            Factory.CreateLinkedList();
 
 
+            //end main program
         }
     }
 }

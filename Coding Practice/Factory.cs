@@ -27,6 +27,18 @@ namespace Coding_Practice
             stack.Push(4);
             stack.Push(5);
             return stack;
+        }   
+
+        public static LinkedList CreateLinkedList()
+        {
+            LinkedList myList = new LinkedList();
+            myList.AddLast("Head of list");
+            myList.AddLast("Hello");
+            myList.AddLast("Magical");
+            myList.AddLast("World");
+            myList.AddLast("Tail of list");
+            myList.printAllNodes();
+            return myList;
         }
 
         //problem: given a stack of unknown size, reverse that stack using only one other stack and a variable.
