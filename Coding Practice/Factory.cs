@@ -49,9 +49,33 @@ namespace Coding_Practice
 
         public static int[] CreateIntArray()
         {
-            int[] myArray = { 1, 6, -1, 0, 4 };
+            int[] myArray = { 1, 6, -1, 0, 10, 4 };
             return myArray;
         }
+        //problem: given an array of unsorted integers, find the index (if one exists) that is equal to the sum of the rest of the numbers in the array
+        public static int splitArray()
+        {
+            int[] arr = CreateIntArray();
+            int target = 0;
+            int answer = -1;
+            //target number is the sum of all the numbers in the array, divided by two
+            for (int i = 0; i < arr.Length; i++)
+            {
+                target += arr[i];
+            }
+            target /= 2;
+            //search for target, if found, save index
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == target)
+                {
+                    answer = i;
+                }
+            }
+            //if answer is -1, no index was found. Otherwise, this is the index with the correct number.
+            return answer;
+        }
+
         //problem: given a linked list, reverse the linked list iteratively
         public static LinkedList ReverseLLIteratively(LinkedList LinkedList)
         {

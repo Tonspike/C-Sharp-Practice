@@ -11,17 +11,20 @@ namespace Coding_Practice
         static void Main(string[] args)
         {
             //begin main program 
-            int[] intArray = Factory.CreateIntArray();
+            int x = Factory.splitArray();
+            Console.WriteLine("x: " + x);
+
+            /*int[] intArray = Factory.CreateIntArray();
             for (int i = 0; i < intArray.Length; i++)
             {
                 Console.Write(intArray[i] + " ");
-            }
+            }*/
             /*char[] array = Factory.CreateCharArray();
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write(array[i]);
-            }*/
-            Console.WriteLine();
+            }
+            Console.WriteLine();*/
 
           /*  LinkedList linkedlist = Factory.CreateLinkedList();
             Console.WriteLine("Original Linked List: ");
