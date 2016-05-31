@@ -41,9 +41,15 @@ namespace Coding_Practice
             return myList;
         }
 
-        public static char[] CreateArray()
+        public static char[] CreateCharArray()
         {
             char[] myArray = {'h', 'e', 'l', 'l', 'o' };
+            return myArray;
+        }
+
+        public static int[] CreateIntArray()
+        {
+            int[] myArray = { 1, 6, -1, 0, 4 };
             return myArray;
         }
         //problem: given a linked list, reverse the linked list iteratively

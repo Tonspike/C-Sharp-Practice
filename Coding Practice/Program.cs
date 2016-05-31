@@ -11,11 +11,16 @@ namespace Coding_Practice
         static void Main(string[] args)
         {
             //begin main program 
-            char[] array = Factory.CreateArray();
+            int[] intArray = Factory.CreateIntArray();
+            for (int i = 0; i < intArray.Length; i++)
+            {
+                Console.Write(intArray[i] + " ");
+            }
+            /*char[] array = Factory.CreateCharArray();
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write(array[i]);
-            }
+            }*/
             Console.WriteLine();
 
           /*  LinkedList linkedlist = Factory.CreateLinkedList();
