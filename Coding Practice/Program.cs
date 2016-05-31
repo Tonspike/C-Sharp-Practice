@@ -11,7 +11,7 @@ namespace Coding_Practice
         static void Main(string[] args)
         {
             //begin main program 
-            int num = Factory.Power(3, 3);
+            int num = Factory.IterativePower(2, 3);
             Console.WriteLine(num);
 
             /*int[] myArray = Factory.CreateIntArray();

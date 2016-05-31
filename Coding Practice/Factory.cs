@@ -261,6 +261,24 @@ namespace Coding_Practice
                 return number * Power(number, exponent - 1);
             }
         }
+        //iterative solution to the same problem:
+        public static int IterativePower(int number, int exponent)
+        {
+            int answer = 1;
+            if (exponent < 0)
+            {
+                return -1;
+            }
+            if (exponent == 0)
+            {
+                return 1;
+            }
+            for (int i = 1; i <= exponent; i++)
+            {
+                answer *= number;
+            }
+            return answer;
+        }
 
         public static void SayHello()
         {
