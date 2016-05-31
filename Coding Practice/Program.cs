@@ -11,7 +11,10 @@ namespace Coding_Practice
         static void Main(string[] args)
         {
             //begin main program 
-            int[] myArray = Factory.CreateIntArray();
+            int num = Factory.Power(3, 3);
+            Console.WriteLine(num);
+
+            /*int[] myArray = Factory.CreateIntArray();
             Console.WriteLine("Original Array: ");
             for (int i = 0; i < myArray.Length; i++)
             {
@@ -25,7 +28,7 @@ namespace Coding_Practice
                 Console.Write(myArray[i] + " ");
             }
             Console.WriteLine();
-
+           */
            /* char[] myString = Factory.replaceSpaces();
             for (int i = 0; i < myString.Length; i++)
             {

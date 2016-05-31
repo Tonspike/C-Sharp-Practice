@@ -242,6 +242,26 @@ namespace Coding_Practice
             }
         }
 
+        //recursion practice!
+        //problem: use recursion that takes two numbers as parameters (the base and the exponent) and outputs the first number raised to the power of the second number
+        public static int Power(int number, int exponent)
+        {
+            //base case 1: if number is less than zero, return -1
+            if (exponent < 0)
+            {
+                return -1;
+            }
+            //base case 2: if number is raised to the 0 power, output is 1
+            if (exponent == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return number * Power(number, exponent - 1);
+            }
+        }
+
         public static void SayHello()
         {
             Console.WriteLine("Hello!");
