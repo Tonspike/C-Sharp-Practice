@@ -40,6 +40,12 @@ namespace Coding_Practice
             myList.printAllNodes();
             return myList;
         }
+
+        public static char[] CreateArray()
+        {
+            char[] myArray = {'h', 'e', 'l', 'l', 'o' };
+            return myArray;
+        }
         //problem: given a linked list, reverse the linked list iteratively
         public static LinkedList ReverseLLIteratively(LinkedList LinkedList)
         {

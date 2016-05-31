@@ -11,14 +11,22 @@ namespace Coding_Practice
         static void Main(string[] args)
         {
             //begin main program 
-            LinkedList linkedlist = Factory.CreateLinkedList();
+            char[] array = Factory.CreateArray();
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write(array[i]);
+            }
+            Console.WriteLine();
+
+          /*  LinkedList linkedlist = Factory.CreateLinkedList();
             Console.WriteLine("Original Linked List: ");
             Console.WriteLine();
             Console.WriteLine("Reversed List: ");
             //LinkedList linkedlist2 = Factory.ReverseLLIteratively(linkedlist);
             //linkedlist2.printAllNodes();
             LinkedList linkedlist3 = Factory.ReverseLLRecursively(linkedlist, linkedlist.head);
-            linkedlist3.printAllNodes();
+            linkedlist3.printAllNodes();*/
+
             //end main program
         }
     }
