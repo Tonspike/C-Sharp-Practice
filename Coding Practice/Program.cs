@@ -11,11 +11,26 @@ namespace Coding_Practice
         static void Main(string[] args)
         {
             //begin main program 
-            char[] myString = Factory.replaceSpaces();
+            int[] myArray = Factory.CreateIntArray();
+            Console.WriteLine("Original Array: ");
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                Console.Write(myArray[i] + " ");
+            }
+            Console.WriteLine();
+            Factory.RecursiveQuicksort(myArray, 0, myArray.Length - 1);
+            Console.WriteLine("Sorted Array: ");
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                Console.Write(myArray[i] + " ");
+            }
+            Console.WriteLine();
+
+           /* char[] myString = Factory.replaceSpaces();
             for (int i = 0; i < myString.Length; i++)
             {
                 Console.Write(myString[i]);
-            }
+            }*/
           
             /*int x = Factory.splitArray();
             Console.WriteLine("x: " + x);*/

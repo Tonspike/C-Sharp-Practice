@@ -52,6 +52,58 @@ namespace Coding_Practice
             int[] myArray = { 1, 6, -1, 0, 10, 4 };
             return myArray;
         }
+        //problem: figure out quicksort
+        //first half: partitioning. Make the pivot value equal to the left index value. 
+        //While leftindex VALUE is smaller than the pivot, increment up. 
+        //while rightindex VALUE is greater than the pivot, increment down.
+        //if left index is less than right index (because the two indices haven't incremented to where they're met), swap the values.
+        //Else return the right value
+        public static int Partition(int[] arr, int LIndex, int RIndex)
+        {
+            int pivot = arr[LIndex];
+            while (true)
+            {
+                while (arr[LIndex] < pivot)
+                {
+                    LIndex++;
+                }
+                while (arr[RIndex] > pivot)
+                {
+                    RIndex--;
+                }
+                if (LIndex < RIndex)
+                {
+                    //swap!
+                    int temp = arr[RIndex];
+                    arr[RIndex] = arr[LIndex];
+                    arr[LIndex] = temp;
+                }
+                else {
+                    return RIndex;
+                }
+            }
+        }
+        //quicksort part 2, the recursive part
+        //if the left and right indices haven't met, get the pivot from the partition code (above)
+        //if pivot index is greater than 1, decrement and pass in to recursive call as right index.
+        //if pivot index +1 is less than the right index, increment and pass in to recursive call as left index
+        public static void RecursiveQuicksort(int[] arr, int LIndex, int RIndex)
+        {
+            if (LIndex < RIndex)
+            {
+                int pivotIndex = Partition(arr, LIndex, RIndex);
+                if (pivotIndex > 1)
+                {
+                    RecursiveQuicksort(arr, LIndex, RIndex - 1);
+                }
+                if (pivotIndex + 1 < RIndex)
+                {
+                    RecursiveQuicksort(arr, LIndex + 1, RIndex);
+                }
+            }
+
+            //(else) base case: do nothing, all sorted!
+        }
 
         //problem: given a string (char array), replace spaces with %20, in place. There are enough spaces given at the end of the existing string.
         public static char[] replaceSpaces()
