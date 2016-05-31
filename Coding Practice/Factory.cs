@@ -43,7 +43,7 @@ namespace Coding_Practice
 
         public static char[] CreateCharArray()
         {
-            char[] myArray = {'h', 'e', 'l', 'l', 'o' };
+            char[] myArray = {'h', 'e', 'l', 'l', 'o' , ' ', 'w', 'o', 'r', 'l', 'd', ' ', ' '};
             return myArray;
         }
 
@@ -52,6 +52,41 @@ namespace Coding_Practice
             int[] myArray = { 1, 6, -1, 0, 10, 4 };
             return myArray;
         }
+
+        //problem: given a string (char array), replace spaces with %20, in place. There are enough spaces given at the end of the existing string.
+        public static char[] replaceSpaces()
+        {
+            char[] arr = CreateCharArray();
+            int finalCharIndex = -1;
+            for (int i = arr.Length - 1; i >= 0; i--)
+            {
+                if (!Char.IsWhiteSpace(arr[i]))
+                {
+                    finalCharIndex = i;
+                    break;
+                }
+            }
+
+            int lastOpenIndex = arr.Length - 1;
+            for (int i = finalCharIndex; i >= 0; i--)
+            {
+                if (Char.IsWhiteSpace(arr[finalCharIndex]))
+                {
+                    arr[lastOpenIndex] = '0';
+                    arr[lastOpenIndex - 1] = '2';
+                    arr[lastOpenIndex - 2] = '%';
+                    finalCharIndex--;
+                    lastOpenIndex = lastOpenIndex - 3;                    
+                }
+                else {
+                    arr[lastOpenIndex] = arr[finalCharIndex];
+                    finalCharIndex--;
+                    lastOpenIndex--;
+                }
+            }
+            return arr;
+        }
+
         //problem: given an array of unsorted integers, find the index (if one exists) that is equal to the sum of the rest of the numbers in the array
         public static int splitArray()
         {

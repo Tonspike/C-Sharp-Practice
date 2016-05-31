@@ -11,8 +11,14 @@ namespace Coding_Practice
         static void Main(string[] args)
         {
             //begin main program 
-            int x = Factory.splitArray();
-            Console.WriteLine("x: " + x);
+            char[] myString = Factory.replaceSpaces();
+            for (int i = 0; i < myString.Length; i++)
+            {
+                Console.Write(myString[i]);
+            }
+          
+            /*int x = Factory.splitArray();
+            Console.WriteLine("x: " + x);*/
 
             /*int[] intArray = Factory.CreateIntArray();
             for (int i = 0; i < intArray.Length; i++)
