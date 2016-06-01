@@ -13,13 +13,13 @@ namespace Coding_Practice
             //begin main program 
 
 
-           /*int num = Factory.IterativeFactorial(4);
-            Console.WriteLine(num);*/
+            /*int num = Factory.IterativeFactorial(4);
+             Console.WriteLine(num);*/
 
             /*int num = Factory.IterativePower(2, 3);
             Console.WriteLine(num);*/
 
-            int[] myArray = Factory.CreateIntArray();
+            /*int[] myArray = Factory.CreateIntArray();
             Console.WriteLine("Original Array: ");
             for (int i = 0; i < myArray.Length; i++)
             {
@@ -32,15 +32,15 @@ namespace Coding_Practice
             {
                 Console.Write(myArray[i] + " ");
             }
-            Console.WriteLine();
-           
-           /*
-           char[] myString = Factory.replaceSpaces();
-            for (int i = 0; i < myString.Length; i++)
-            {
-                Console.Write(myString[i]);
-            }*/
-          
+            Console.WriteLine();*/
+
+            /*
+            char[] myString = Factory.replaceSpaces();
+             for (int i = 0; i < myString.Length; i++)
+             {
+                 Console.Write(myString[i]);
+             }*/
+
             /*int x = Factory.splitArray();
             Console.WriteLine("x: " + x);*/
 
@@ -56,9 +56,12 @@ namespace Coding_Practice
             }
             Console.WriteLine();*/
 
-          /*  LinkedList linkedlist = Factory.CreateLinkedList();
             Console.WriteLine("Original Linked List: ");
-            Console.WriteLine();
+            LinkedList linkedlist = Factory.CreateLinkedList();
+            Console.WriteLine(linkedlist.head.data);
+
+            Factory.findMiddleNodeLL(linkedlist.head);
+            /*
             Console.WriteLine("Reversed List: ");
             //LinkedList linkedlist2 = Factory.ReverseLLIteratively(linkedlist);
             //linkedlist2.printAllNodes();

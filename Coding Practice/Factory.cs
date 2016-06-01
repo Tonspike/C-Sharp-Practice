@@ -52,6 +52,19 @@ namespace Coding_Practice
             int[] myArray = { 1, 6, -1, 0, 10, 4 };
             return myArray;
         }
+        //problem: find the middle node of a linkedlist
+        public static void findMiddleNodeLL(Node head)
+        {
+            Node fastPointer = head;
+            Node slowPointer = head;
+            while (fastPointer.next != null && fastPointer.next.next != null)
+            {
+                slowPointer = slowPointer.next;
+                fastPointer = fastPointer.next.next;
+            }
+            Console.WriteLine("finished, midpoint data: " + slowPointer.data);
+        }
+
         //problem: figure out quicksort
         //first half: partitioning. Make the pivot value equal to the left index value. 
         //While leftindex VALUE is smaller than the pivot, increment up. 
