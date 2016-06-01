@@ -52,6 +52,28 @@ namespace Coding_Practice
             int[] myArray = { 1, 6, -1, 0, 10, 4 };
             return myArray;
         }
+
+        public static Hashtable CreateHT()
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("1", "jenna");
+            ht.Add("2", "mike");
+            if (ht.ContainsValue("sarah"))
+            {
+                Console.WriteLine("already there");
+            }
+            else
+            {
+                ht.Add("3", "sarah");
+            }
+            ICollection key = ht.Keys;
+            foreach (string k in key)
+            {
+                Console.WriteLine(k + " : " + ht[k]);
+            }
+
+            return ht;
+        }
         //problem: find the middle node data of a linkedlist
         public static void findMiddleNodeLL(Node head)
         {
@@ -82,7 +104,6 @@ namespace Coding_Practice
             Console.WriteLine("false, LL is not circular");
             return false;
         }
-
 
         //problem: figure out quicksort
         //first half: partitioning. Make the pivot value equal to the left index value. 

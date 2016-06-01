@@ -12,7 +12,7 @@ namespace Coding_Practice
         {
             //begin main program 
 
-
+            Factory.CreateHT();
             /*int num = Factory.IterativeFactorial(4);
              Console.WriteLine(num);*/
 
@@ -56,11 +56,10 @@ namespace Coding_Practice
             }
             Console.WriteLine();*/
 
-            Console.WriteLine("Original Linked List: ");
+            /*Console.WriteLine("Original Linked List: ");
             LinkedList linkedlist = Factory.CreateLinkedList();
-            Console.WriteLine(linkedlist.head.data);
-
-            Factory.isLLCircular(linkedlist.head);
+            Console.WriteLine();
+            Factory.ReverseLLRecursively(linkedlist, linkedlist.head);*/
             /*
             Console.WriteLine("Reversed List: ");
             //LinkedList linkedlist2 = Factory.ReverseLLIteratively(linkedlist);
