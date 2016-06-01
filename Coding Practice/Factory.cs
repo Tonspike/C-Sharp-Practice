@@ -243,7 +243,7 @@ namespace Coding_Practice
         }
 
         //recursion practice!
-        //problem: use recursion that takes two numbers as parameters (the base and the exponent) and outputs the first number raised to the power of the second number
+        //problem: use recursion to make a function that takes two numbers as parameters (the base and the exponent) and outputs the first number raised to the power of the second number
         public static int Power(int number, int exponent)
         {
             //base case 1: if number is less than zero, return -1
@@ -278,6 +278,20 @@ namespace Coding_Practice
                 answer *= number;
             }
             return answer;
+        }
+
+        //recursion practice: use recursion to create a function that takes a number as a parameter, and returns the factorial (!) of that number.
+        public static int RecursiveFactorial(int number)
+        {
+            //base case:
+           if (number < 2)
+            {
+                return 1;
+            }
+           else
+            {
+                return (number * RecursiveFactorial(number - 1));
+            }
         }
 
         public static void SayHello()
