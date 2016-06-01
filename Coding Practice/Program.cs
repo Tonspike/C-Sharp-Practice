@@ -11,8 +11,8 @@ namespace Coding_Practice
         static void Main(string[] args)
         {
             //begin main program 
-            int num = Factory.IterativePower(2, 3);
-            Console.WriteLine(num);
+            /*int num = Factory.IterativePower(2, 3);
+            Console.WriteLine(num);*/
 
             /*int[] myArray = Factory.CreateIntArray();
             Console.WriteLine("Original Array: ");
@@ -29,11 +29,11 @@ namespace Coding_Practice
             }
             Console.WriteLine();
            */
-           /* char[] myString = Factory.replaceSpaces();
+           char[] myString = Factory.replaceSpaces();
             for (int i = 0; i < myString.Length; i++)
             {
                 Console.Write(myString[i]);
-            }*/
+            }
           
             /*int x = Factory.splitArray();
             Console.WriteLine("x: " + x);*/

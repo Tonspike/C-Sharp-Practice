@@ -112,7 +112,7 @@ namespace Coding_Practice
             int finalCharIndex = -1;
             for (int i = arr.Length - 1; i >= 0; i--)
             {
-                if (!Char.IsWhiteSpace(arr[i]))
+                if (arr[i] != ' ')
                 {
                     finalCharIndex = i;
                     break;
@@ -122,7 +122,7 @@ namespace Coding_Practice
             int lastOpenIndex = arr.Length - 1;
             for (int i = finalCharIndex; i >= 0; i--)
             {
-                if (Char.IsWhiteSpace(arr[finalCharIndex]))
+                if (arr[finalCharIndex] == ' ')
                 {
                     arr[lastOpenIndex] = '0';
                     arr[lastOpenIndex - 1] = '2';
