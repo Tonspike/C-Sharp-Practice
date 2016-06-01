@@ -12,7 +12,7 @@ namespace Coding_Practice
         {
             //begin main program 
 
-           int num = Factory.RecursiveFactorial(4);
+           int num = Factory.IterativeFactorial(4);
             Console.WriteLine(num);
 
             /*int num = Factory.IterativePower(2, 3);

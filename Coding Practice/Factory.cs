@@ -293,6 +293,23 @@ namespace Coding_Practice
                 return (number * RecursiveFactorial(number - 1));
             }
         }
+        //iterative version of the factorial function above:
+        public static int IterativeFactorial(int number)
+        {
+            if (number < 2)
+            {
+                return 1;
+            }
+            else
+            {
+                int answer = number;
+                for (int i = number-1; i >= 2; i--)
+                {
+                    answer *= i;
+                }
+                return answer;
+            }
+        }
 
         public static void SayHello()
         {
