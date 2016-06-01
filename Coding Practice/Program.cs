@@ -12,27 +12,28 @@ namespace Coding_Practice
         {
             //begin main program 
 
-           int num = Factory.IterativeFactorial(4);
-            Console.WriteLine(num);
+
+           /*int num = Factory.IterativeFactorial(4);
+            Console.WriteLine(num);*/
 
             /*int num = Factory.IterativePower(2, 3);
             Console.WriteLine(num);*/
 
-            /*int[] myArray = Factory.CreateIntArray();
+            int[] myArray = Factory.CreateIntArray();
             Console.WriteLine("Original Array: ");
             for (int i = 0; i < myArray.Length; i++)
             {
                 Console.Write(myArray[i] + " ");
             }
             Console.WriteLine();
-            Factory.RecursiveQuicksort(myArray, 0, myArray.Length - 1);
+            Factory.QuicksortA(myArray, 0, myArray.Length - 1);
             Console.WriteLine("Sorted Array: ");
             for (int i = 0; i < myArray.Length; i++)
             {
                 Console.Write(myArray[i] + " ");
             }
             Console.WriteLine();
-           */
+           
            /*
            char[] myString = Factory.replaceSpaces();
             for (int i = 0; i < myString.Length; i++)

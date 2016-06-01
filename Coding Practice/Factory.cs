@@ -104,7 +104,50 @@ namespace Coding_Practice
 
             //(else) base case: do nothing, all sorted!
         }
+        
+        //Different version of Quicksort, closer to algorithm models I found
+        public static void QuicksortA(int[] arr, int lowIndex, int highIndex)
+        {
+            //if high and low indices haven't met yet, keep going
+            if (lowIndex < highIndex)
+            {
+                // partition, then run quicksort on both halves of partition
+                int pivotIndex = PartitionA(arr, lowIndex, highIndex);
+                QuicksortA(arr, lowIndex, pivotIndex - 1);
+                QuicksortA(arr, pivotIndex + 1, highIndex);
+            }
+            //else: all is sorted. Done!
+        }
+        //partitioning for QuicksortA above
+        public static int PartitionA(int[] arr, int lowIndex, int highIndex)
+        {
+            //set pivot as the value of the high index of the array, set left wall as the low index. Pivot can be anywhere, but high works for now.
+            int pivotValue = arr[highIndex];
+            int leftWallIndex = lowIndex;
+            //loop: all values between the low index and just before the high index/pivot
+            for (int i = lowIndex; i < highIndex; i++)
+            {
+                //if the value of arr[i] is less than the pivot value, swap arr[i] with arr[leftwallindex] (the low value), then increment leftwall index.
+                //that means that everything less than the pivot value (BUT NOT MORE THAN) will be in the spots starting at the leftwall index and following.
+                if (arr[i] <= pivotValue)
+                {
+                    swap(arr, leftWallIndex, i);
+                    leftWallIndex++;
+                }
+            }
+            //swap the highindex (the pivot value) with the leftwallindex (everything to the left of this is lower than the pivotvalue).
+            swap(arr, leftWallIndex, highIndex);
+            //return the leftwallindex as the new partition value; it is in the correct place now! Everything to the right and left of it need to be sorted.
+            return leftWallIndex;
+        }
 
+        public static void swap(int[] arr, int a, int b)
+        {
+            int temp = arr[a];
+            arr[a] = arr[b];
+            arr[b] = temp;
+        }
+        
         //problem: given a string (char array), replace spaces with %20, in place. There are enough spaces given at the end of the existing string.
         public static char[] replaceSpaces()
         {
