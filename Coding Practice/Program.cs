@@ -60,7 +60,7 @@ namespace Coding_Practice
             LinkedList linkedlist = Factory.CreateLinkedList();
             Console.WriteLine(linkedlist.head.data);
 
-            Factory.findMiddleNodeLL(linkedlist.head);
+            Factory.isLLCircular(linkedlist.head);
             /*
             Console.WriteLine("Reversed List: ");
             //LinkedList linkedlist2 = Factory.ReverseLLIteratively(linkedlist);

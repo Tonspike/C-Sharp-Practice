@@ -52,7 +52,7 @@ namespace Coding_Practice
             int[] myArray = { 1, 6, -1, 0, 10, 4 };
             return myArray;
         }
-        //problem: find the middle node of a linkedlist
+        //problem: find the middle node data of a linkedlist
         public static void findMiddleNodeLL(Node head)
         {
             Node fastPointer = head;
@@ -64,6 +64,25 @@ namespace Coding_Practice
             }
             Console.WriteLine("finished, midpoint data: " + slowPointer.data);
         }
+        //problem: determine if a linked list is circular
+        public static Boolean isLLCircular(Node head)
+        {
+            Node fastP = head;
+            Node slowP = head;
+            while (fastP.next != null && fastP.next.next != null)
+            {
+                slowP = slowP.next;
+                fastP = fastP.next.next;
+                if (slowP == fastP)
+                {
+                    Console.WriteLine("true, LL is circular");
+                    return true;
+                }
+            }
+            Console.WriteLine("false, LL is not circular");
+            return false;
+        }
+
 
         //problem: figure out quicksort
         //first half: partitioning. Make the pivot value equal to the left index value. 
