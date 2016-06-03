@@ -12,7 +12,9 @@ namespace Coding_Practice
         {
             //begin main program 
 
-            Factory.Math();
+            Factory.LCS("geek", "eke", 0, 0);
+
+            //Factory.Math();
             //Factory.CreateHT();
             /*int num = Factory.IterativeFactorial(4);
              Console.WriteLine(num);*/

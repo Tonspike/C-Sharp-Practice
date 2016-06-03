@@ -74,6 +74,37 @@ namespace Coding_Practice
 
             return ht;
         }
+        //problem: find Longest Common Subsequence of two strings
+        public static int LCS(String A, String B, int indexA, int indexB)
+        {
+            int LCSCount = 0;
+            if (indexA == A.Length)
+            {
+                //End of string A, no subsequence
+                return 0;
+            }
+            if (indexB == B.Length)
+            {   //End of string B, no subsequence
+                return 0;
+            }
+            //loop through string A and look for matches with string b
+            for (int i = indexA; i < A.Length; i++)
+            {
+                //B.indexOf(valueBeingSearchedFor, StartingFromThisIndex, returns -1 if not found
+                int inCommon = B.IndexOf(A[i], indexB);
+                if (inCommon != -1)
+                {
+                    //if something is found, call recursively from the next index after the one in common.
+                    int temp = 1 + LCS(A, B, i + 1, inCommon + 1);
+                    if (LCSCount < temp)
+                    {
+                        LCSCount = temp;
+                    }
+                }
+            }
+            return LCSCount;
+        }
+
         //problem: use a stack to evaluate a mathematical expression using only + and *, for example 1+2*8+8. Multiplication happens first, then addition.
         public static int Math()
         {
