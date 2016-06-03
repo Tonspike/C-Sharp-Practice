@@ -12,8 +12,8 @@ namespace Coding_Practice
         {
             //begin main program 
 
-            char[] myArray = { 'n','e', 'v', 'e', 'n'};
-            var answer = Factory.isPalindrome(myArray, 0, myArray.Length-1);
+            char[] myArray = { 'e', 'v', 'e', 'n'};
+            var answer = Factory.isPalindrome2(myArray);
             Console.WriteLine("answer is " + answer);
 
             //Factory.LCS("geek", "eke", 0, 0);

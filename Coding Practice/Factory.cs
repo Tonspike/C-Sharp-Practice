@@ -74,7 +74,7 @@ namespace Coding_Practice
 
             return ht;
         }
-        //problem: is string (char[]) a palindrome?
+        //problem: is string (char[]) a palindrome? recursive
         public static Boolean isPalindrome(char[] arr, int firstIndex, int lastIndex)
         {
             if (arr[firstIndex] == arr[lastIndex])
@@ -94,6 +94,24 @@ namespace Coding_Practice
             }
         }
 
+        //problem: is string (char[] a palindrome? iterative
+        public static Boolean isPalindrome2(char[] arr)
+        {
+            int lastCharIndex = arr.Length - 1;
+            for (int i=0; i<arr.Length/2; i++)
+            {
+                if (arr[i] == arr[lastCharIndex])
+                {
+                    //keep going! decrement lastChar
+                    lastCharIndex--;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
 
         //problem: find Longest Common Subsequence of two strings
         public static int LCS(String A, String B, int indexA, int indexB)
