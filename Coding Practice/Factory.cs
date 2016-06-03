@@ -74,6 +74,55 @@ namespace Coding_Practice
 
             return ht;
         }
+        //problem: use a stack to evaluate a mathematical expression using only + and *, for example 1+2*8+8. Multiplication happens first, then addition.
+        public static int Math()
+        {
+            char[] equation = { '1', '+', '2', '*', '8', '+', '8' };
+            Console.Write("equation is: ");
+            for (int j=0; j<equation.Length; j++)
+            {
+                Console.Write(equation[j]);
+            }
+            Console.WriteLine();
+
+            Stack stack = new Stack();
+
+            int count = 0;
+            int i = 0;
+            while (i < equation.Length) { 
+                if (equation[i] != '+' && equation[i] != '*')
+                {
+                    var convertedI = char.GetNumericValue(equation[i]);
+                    stack.Push(convertedI);
+                    i++;
+                    count++;
+                }
+                else if (equation[i] == '*')
+                {
+                    var temp = stack.Pop();
+                    var convertedTemp = Convert.ToDouble(temp);
+                    i++;
+                    var convertedTemp2 = char.GetNumericValue(equation[i]);
+                    convertedTemp *= convertedTemp2;
+                    stack.Push(convertedTemp);
+                    i++;
+                }
+                else
+                {
+                    i++;
+                }
+            }
+            var answer = 0;
+            for (int j = 0; j < count; j++)
+            {
+                var temp = stack.Pop();
+                int convertedTemp = Convert.ToInt32(temp);
+                answer += convertedTemp;
+            }
+            Console.WriteLine("answer is " + answer);
+        return answer;
+        }
+        
         //problem: find the middle node data of a linkedlist
         public static void findMiddleNodeLL(Node head)
         {

@@ -12,7 +12,8 @@ namespace Coding_Practice
         {
             //begin main program 
 
-            Factory.CreateHT();
+            Factory.Math();
+            //Factory.CreateHT();
             /*int num = Factory.IterativeFactorial(4);
              Console.WriteLine(num);*/
 
