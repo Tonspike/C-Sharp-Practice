@@ -12,7 +12,11 @@ namespace Coding_Practice
         {
             //begin main program 
 
-            Factory.LCS("geek", "eke", 0, 0);
+            char[] myArray = { 'n','e', 'v', 'e', 'n'};
+            var answer = Factory.isPalindrome(myArray, 0, myArray.Length-1);
+            Console.WriteLine("answer is " + answer);
+
+            //Factory.LCS("geek", "eke", 0, 0);
 
             //Factory.Math();
             //Factory.CreateHT();

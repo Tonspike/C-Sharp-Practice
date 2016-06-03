@@ -74,6 +74,27 @@ namespace Coding_Practice
 
             return ht;
         }
+        //problem: is string (char[]) a palindrome?
+        public static Boolean isPalindrome(char[] arr, int firstIndex, int lastIndex)
+        {
+            if (arr[firstIndex] == arr[lastIndex])
+            {
+                if (firstIndex < lastIndex)
+                {
+                    return isPalindrome(arr, firstIndex + 1, lastIndex - 1);
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
         //problem: find Longest Common Subsequence of two strings
         public static int LCS(String A, String B, int indexA, int indexB)
         {
