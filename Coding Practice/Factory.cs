@@ -409,6 +409,31 @@ namespace Coding_Practice
             nextItem.next = node;     //set the item you got out link to next item to the current item i.e. reverse it
             return linkedlist;
         }
+        //problem: get all subsets of a set (powerset, includes empty brackets)
+        public static List<List<int>> GetSubsetsOfASet(List<int> set, int index)
+        {
+            List<List<int>> answerSet;
+            if (index == set.Count)
+            {
+                answerSet = new List<List<int>>();
+                answerSet.Add(new List<int>());
+            }
+            else
+            {
+                answerSet = GetSubsetsOfASet(set, index + 1);
+                var item = set[index];
+                var anotherSet = new List<List<int>>();
+                foreach (var subset in answerSet)
+                {
+                    var newSet = new List<int>();
+                    newSet.AddRange(subset);
+                    newSet.Add(item);
+                    anotherSet.Add(newSet);
+                }
+                answerSet.AddRange(anotherSet);
+            }
+            return answerSet;
+        }
 
         //problem: given a stack of unknown size, reverse that stack using only one other stack and a variable.
         public static void Reverse()

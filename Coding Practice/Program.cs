@@ -11,10 +11,31 @@ namespace Coding_Practice
         static void Main(string[] args)
         {
             //begin main program 
-
+            List<int> mylist = new List<int>();
+            mylist.Add(1);
+            mylist.Add(2);
+            mylist.Add(3);
+            Console.WriteLine("List: ");
+            foreach (int num in mylist)
+            {
+                Console.Write(num + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine("sets: ");
+            var subsets = Factory.GetSubsetsOfASet(mylist, 0);
+            foreach (var subset in subsets)
+            {
+                Console.Write("[");
+                foreach (var item in subset)
+                {
+                    Console.Write(item + " ");
+                }
+                Console.Write("]");
+            }
+            /*
             char[] myArray = { 'e', 'v', 'e', 'n'};
             var answer = Factory.isPalindrome2(myArray);
-            Console.WriteLine("answer is " + answer);
+            Console.WriteLine("answer is " + answer);*/
 
             //Factory.LCS("geek", "eke", 0, 0);
 
