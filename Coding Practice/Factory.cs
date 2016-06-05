@@ -409,6 +409,35 @@ namespace Coding_Practice
             nextItem.next = node;     //set the item you got out link to next item to the current item i.e. reverse it
             return linkedlist;
         }
+
+        //problem: given a linked list, reverse the linked list recursively
+        public static LinkedList ReverseLLRecursively2(LinkedList linkedlist)
+        {
+
+            linkedlist.head = ReverseLLNodesRecursively2(null, linkedlist.head);
+
+            return linkedlist;
+        }
+
+        // the recursive function that works on a previous and current node.
+        // It returns the last thing in the original linked list (the new head)
+        public static Node ReverseLLNodesRecursively2(Node prevNode, Node currentNode)
+        {
+            if(currentNode == null) //we've reached the end of the list, prevNode was the last thing in the list
+            {
+                return prevNode;
+            }
+
+            Node nextNode = currentNode.next; //save the next node for later
+
+            //change the current Node to point back to the previous
+            currentNode.next = prevNode;
+
+            //recurse, but with the currentNode now being the previous and the next now being the current node.
+            return ReverseLLNodesRecursively2(currentNode, nextNode);
+        }
+
+
         //problem: get all subsets of a set (powerset, includes empty brackets)
         public static List<List<int>> GetSubsetsOfASet(List<int> set, int index)
         {

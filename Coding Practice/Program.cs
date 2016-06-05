@@ -11,7 +11,7 @@ namespace Coding_Practice
         static void Main(string[] args)
         {
             //begin main program 
-            List<int> mylist = new List<int>();
+           /* List<int> mylist = new List<int>();
             mylist.Add(1);
             mylist.Add(2);
             mylist.Add(3);
@@ -31,7 +31,7 @@ namespace Coding_Practice
                     Console.Write(item + " ");
                 }
                 Console.Write("]");
-            }
+            }*/
             /*
             char[] myArray = { 'e', 'v', 'e', 'n'};
             var answer = Factory.isPalindrome2(myArray);
@@ -84,10 +84,11 @@ namespace Coding_Practice
             }
             Console.WriteLine();*/
 
-            /*Console.WriteLine("Original Linked List: ");
+            Console.WriteLine("Original Linked List: ");
             LinkedList linkedlist = Factory.CreateLinkedList();
             Console.WriteLine();
-            Factory.ReverseLLRecursively(linkedlist, linkedlist.head);*/
+            Factory.ReverseLLRecursively2(linkedlist);
+            linkedlist.printAllNodes();
             /*
             Console.WriteLine("Reversed List: ");
             //LinkedList linkedlist2 = Factory.ReverseLLIteratively(linkedlist);
